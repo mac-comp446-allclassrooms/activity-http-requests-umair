@@ -1,0 +1,105 @@
+
+Name: Umair Mohammed
+
+Step 2: View the list of tasks
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.13.1
+Date: Fri, 31 Jan 2025 06:21:37 GMT
+Content-Type: application/json
+Content-Length: 370
+Connection: close
+
+{
+  "tasks": [
+    {
+      "description": "Milk, Cheese, Pizza, Fruit, Tylenol",
+      "done": false,
+      "title": "Buy groceries",
+      "uri": "http://127.0.0.1:5000/todo/1"
+    },
+    {
+      "description": "Need to find a good Python tutorial on the web",
+      "done": false,
+      "title": "Learn Python",
+      "uri": "http://127.0.0.1:5000/todo/2"
+    }
+  ]
+}
+
+Step 3: Creating a new task
+
+HTTP/1.1 201 CREATED
+Server: Werkzeug/3.1.3 Python/3.13.1
+Date: Fri, 31 Jan 2025 07:02:42 GMT
+Content-Type: application/json
+Content-Length: 148
+Connection: close
+
+{
+  "task": {
+    "description": "Go Take An Hour Nap",
+    "done": false,
+    "title": "Nap Time",
+    "uri": "http://127.0.0.1:5000/todo/3"
+  }
+}
+
+Step 4: Mark a task as "done"
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.13.1
+Date: Fri, 31 Jan 2025 07:29:39 GMT
+Content-Type: application/json
+Content-Length: 147
+Connection: close
+
+{
+  "task": {
+    "description": "Go Take An Hour Nap",
+    "done": true,
+    "title": "Nap Time",
+    "uri": "http://127.0.0.1:5000/todo/3"
+  }
+}
+
+Step 5: Delete a task
+
+Response:
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.13.1
+Date: Fri, 31 Jan 2025 07:31:04 GMT
+Content-Type: application/json
+Content-Length: 21
+Connection: close
+
+{
+  "result": true
+}
+
+GET After Response: 
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.13.1
+Date: Fri, 31 Jan 2025 07:33:22 GMT
+Content-Type: application/json
+Content-Length: 370
+Connection: close
+
+{
+  "tasks": [
+    {
+      "description": "Milk, Cheese, Pizza, Fruit, Tylenol",
+      "done": false,
+      "title": "Buy groceries",
+      "uri": "http://127.0.0.1:5000/todo/1"
+    },
+    {
+      "description": "Need to find a good Python tutorial on the web",
+      "done": false,
+      "title": "Learn Python",
+      "uri": "http://127.0.0.1:5000/todo/2"
+    }
+  ]
+}

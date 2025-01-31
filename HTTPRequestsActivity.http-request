@@ -1,0 +1,15 @@
+{
+  "body": {
+    "content": "",
+    "file": false,
+    "fileSize": false
+  },
+  "headers": {
+    "authorization": "Basic bWFjYWxlc3RlcjpzY290cw==",
+    "content-type": "application/json",
+    "content-length": "17"
+  },
+  "method": "GET",
+  "title": "New HTTP Request",
+  "url": "http://127.0.0.1:5000/todo"
+}
